@@ -1,58 +1,294 @@
-<!DOCTYPE HTML>
-	        <html>
-		<head>
-		<title>Mohamed Zaitoon</title>
-		<meta charset="utf-8" />
-		<meta name="description" content="Mohamed Zaitoon">
-		<meta name="yandex-verification" content="56591e46b32ddf4c" />
-		<meta name="keywords" content="android,web,dev,design">
-		<meta name="robots" content="index, follow">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<meta name="author" content="Mohamed Zaitoon">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<link rel="shortcut icon" href="assets/css/images/icon.ico">
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/images/icon.ico" /><![endif]-->
-	</head>
-	<body class="loading">
-		<div id="wrapper">
-			<div id="bg"></div>
-			<div id="overlay"></div>
-			<div id="main">
+<!DOCTYPE html>
+<html> 
+  <head>
+      <title>Mohamed Zaitoon</title>
+      <!-- Meta -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Mohamed Zaitoon Resume/CV Page">
+      <meta name="author" content="Mohamed Zaitoon"> 	  
+      <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+      <!-- Global CSS -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">   
+      <!-- Plugins CSS -->
+      <link rel="stylesheet" href="css/font-awesome.css">
+      <!-- Theme CSS -->  
+      <link id="theme-style" rel="stylesheet" href="css/index.css">
+  </head> 
 
-				<!-- Header -->
-					<header id="header">
-						<h1>Mohamed Zaitoon</h1>
-						<nav>
-							<ul>
-								<li><a href="https://twitter.com/@mzaitoon70" class="icon fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
-							  <li><a href="https://www.facebook.com/mzaitoon70" class="icon fa-facebook" target="_blank"><span class="label">Twitter</span></a></li>
-							  <li><a href="https://www.instagram.com/mohamedzaitoon70" class="icon fa-instagram" target="_blank"><span class="label">Twitter</span></a></li>
-							  <li><a href="https://www.youtube.com/channel/UCiIYQBfeFusyx5QtvdRYfqQ" class="icon fa-youtube-play" target="_blank"><span class="label">YouTube</span></a></li>
-								<li><a href="https://github.com/mohamed-zaitoon" class="icon fa-github" target="_blank"><span class="label">Github</span></a></li>
-								<li><a href="https://wa.me/201554257297" class="icon fa-whatsapp" target="_blank"><span class="label">Github</span></a></li>
-				
-								<li><a href="mailto:mzaitoon70@gmail.com" class="icon fa-envelope-o" target="_blank"><span class="label">Email</span></a></li>
-							</ul>
-						</nav>
-					</header>
+  <body ng-app="app">
 
-				<!-- Footer -->
-					<footer id="footer">
-						<span class="copyright">&copy;Design by Mohamed Zaitoon.</span>
-					</footer>
+    <!-- Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-138000712-6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-			</div>
-		</div>
-		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-		<script>
-			window.onload = function() { document.body.className = ''; }
-			window.ontouchmove = function() { return false; }
-			window.onorientationchange = function() { document.body.scrollTop = 0; }
-		</script>
-	</body>
-</html>
+  gtag('config', 'UA-138000712-6');
+</script>
+	
+	<div id="google_translate_element"></div>
+	
+    <div class="wrapper" ng-controller="PageCtrl" ng-init="init()">
+        <div class="sidebar-wrapper">
+            <div class="profile-container">
+                <img id="photo" class="profile" src="images/profile.jpg" alt="Mariana Azevedo profile photo" />
+                <h1 class="name">Mariana Azevedo</h1>
+                <h3 class="tagline">Full Stack Developer</h3>
+            </div><!--//profile-container-->
+            
+            <div class="contact-container container-block">
+                <ul class="list-unstyled contact-list">
+                    <li class="email cursor-pointer"><i class="fa fa-envelope"></i><a ng-click="sendMail()">mariana@bsi.ufla.br</a></li>
+                    <li class="linkedin cursor-pointer"><i class="fa fa-linkedin"></i><a ng-click="goToLinkedIn()" target="_blank">linkedin.com/in/mariana-azevedo-santos</a></li>
+                    <li class="github cursor-pointer"><i class="fa fa-github"></i><a ng-click="goToGithub()" target="_blank">mariazevedo88</a></li>
+                    <li class="github cursor-pointer"><i class="fa fa-file"></i><a ng-click="goToSourcerer()" target="_blank">mariazevedo88</a></li>
+                </ul>
+            </div><!--//contact-container-->
+            <div class="education-container container-block">
+                <h2 class="container-block-title">Education</h2>
+                <div class="item">
+                    <h4 class="degree">MSc in Computer Science</h4>
+                    <h5 class="meta">Federal University of Lavras - Universidade Federal de Lavras (UFLA)</h5>
+                    <h5 class="meta">Field: Software Engineering</h5>
+                    <div class="time">2013 - 2015</div>
+                </div><!--//item-->
+                <div class="item">
+                    <h4 class="degree">BSc in Information Systems</h4>
+                    <h5 class="meta">Federal University of Lavras - Universidade Federal de Lavras (UFLA)</h5>
+                    <div class="time">2007 - 2011</div>
+                </div><!--//item-->
+            </div><!--//education-container-->
+            
+            <div class="languages-container container-block">
+                <h2 class="container-block-title">Languages</h2>
+                <ul class="list-unstyled interests-list">
+                    <li>Portuguese <span class="lang-desc">(Native)</span></li>
+                    <li>English <span class="lang-desc">(Advanced)</span></li>
+                </ul>
+            </div><!--//interests-->
+            
+            <div class="interests-container container-block">
+                <h2 class="container-block-title">Interests</h2>
+                <ul class="list-unstyled interests-list">
+                    <li>Software achitecture</li>
+                    <li>Software engineering</li>
+                    <li>Software quality</li>
+                    <li>Code quality</li>
+                    <li>Clean code</li>
+                    <li>Java development</li>
+                    <li>Mobile development</li>
+                </ul>
+            </div><!--//interests-->
+            
+        </div><!--//sidebar-wrapper-->
+        
+        <div class="main-wrapper">
+            
+            <section class="section summary-section">
+                <h2 class="section-title"><i class="fa fa-user"></i>Career Profile</h2>
+                <div class="summary">
+                    <p>Developer and analyst with more than 9 years of experience in software development. I'm very interest in empirical
+                    software engineering, code quality assessment, agile development, back-end development, and mobile development.</p>
+                </div><!--//summary-->
+            </section><!--//section-->
+            
+            <section class="section experiences-section">
+                <h2 class="section-title"><i class="fa fa-briefcase"></i>Experiences</h2>
+                
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title">Full-Stack Developer</h3>
+                            <div class="time">2016 - Present</div>
+                        </div><!--//upper-row-->
+                        <div class="company">Equals S/A - Stone.co</div>
+                    </div><!--//meta-->
+                    <div class="details">
+                        <p>Working in a financial management system with Java EE, Spring Boot, Apache Camel, JBoss servers, and Shell Script.</p>  
+                    </div><!--//details-->
+                </div><!--//item-->
+                
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title">Full-Stack Developer</h3>
+                            <div class="time">2011 - 2016</div>
+                        </div><!--//upper-row-->
+                        <div class="company">Mitah Technologies Ltda</div>
+                    </div><!--//meta-->
+                    <div class="details">
+                        <p>Worked as front-end developer/team leader for almost 3 years (with JavaScript/AngularJS/Bootstrap). Also, worked as back-end developer (Java EE and Groovy/Grails) and mobile developer (Android) for another 3 years.</p>  
+                    </div><!--//details-->
+                </div><!--//item-->
+                
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title">Internships - Junior System Analyst</h3>
+                            <div class="time">2008 - 2011</div>
+                        </div><!--//upper-row-->
+                        <div class="company">Federal University of Lavras - Universidade Federal de Lavras (UFLA)</div>
+                    </div><!--//meta-->
+                    <div class="details">
+                        <p>Worked in three different research groups at Federal University of Lavras (UFLA) as developer/scrum master/team leader
+                        for almost 3 years (with Java/HTML/CSS): Geomatics lab, being instructor in geoprocessing courses; Educational game lab;
+                        and, Software Engineering lab named LabGTI.</p>  
+                    </div><!--//details-->
+                </div><!--//item-->
+                
+            </section><!--//section-->
+            
+            <section class="section projects-section">
+                <h2 class="section-title"><i class="fa fa-archive"></i>Projects</h2>
+                <div class="intro">
+                    <p>Projects that I created or colaborate as developer</p>
+                </div><!--//intro-->
+                <div class="item">
+                    <span class="project-title"><a href="http://levaeu.net/" target="_blank">Leva Eu - Pra onde você quer ir, a gente de leva!</a></span> - 
+                    <span class="project-tagline">Service to book executive trip's of public sector companies</span>
+                    <div class="company">As Mitah Technologies' front-end Javascript/Angular.js developer</div>
+                </div><!--//item-->
+                <div class="item">
+                    <span class="project-title"><a href="https://www.equals.com.br/" target="_blank">Equals - Gestão Financeira Inteligente</a></span> -
+                    <span class="project-tagline">A credit-card conciliation app that integrates with more than 65 credit card companies and gateways in Brazil and worldwide. The solution controls, 
+                        validate and process all the information automatically. Then, the customer has full control of your card receivables in a single environment.</span>
+                    <div class="company">As Equals/Stone.co' back-end Java developer</div>
+                </div>
+                <!--//item-->
+                <div class="item">
+                    <span class="project-title"><a href="https://github.com/mariazevedo88/o3smeasures-tool">o3smeasures</a></span> - 
+                    <span class="project-tagline">Eclipse plug-in to evaluate software internal quality of Java projects.</span>
+                     <div class="company">Personal. Language: Java</div>
+                </div><!--//item-->
+                <div class="item">
+                    <span class="project-title"><a href="https://github.com/mariazevedo88/CakeUI" target="_blank">CakeUI</a></span> - 
+                    <span class="project-tagline">Framework to build Android applications easily.</span>
+                    <div class="company">Personal. Language: Java</div>
+                </div><!--//item-->                
+                <div class="item">
+                    <span class="project-title"><a href="https://github.com/mariazevedo88/hash-generator" target="_blank">hash-generator</a></span> -
+                    <span class="project-tagline">JavaEE app to generate hash code from a string.</span>
+                    <div class="company">Personal. Language: Java</div>
+                </div>
+                <!--//item-->
+                <div class="item">
+                    <span class="project-title"><a href="https://mariazevedo88.github.io/hash-generator-js/#/" target="_blank">hash-generator-js</a></span> -
+                    <span class="project-tagline">A Vue.js application with a javascript implementation of String's class hashCode method in Java.</span>
+                    <div class="company">Personal. Language: Javascript/Vue.js</div>
+                </div><!--//item-->
+                <div class="item">
+                    <span class="project-title"><a href="https://github.com/mariazevedo88/json-formatter-validator" target="_blank">json-formatter-validator</a></span> -
+                    <span class="project-tagline">Java tool for json validation via string or file and correction of invalid json-like string.</span>
+                    <div class="company">Personal. Language: Java</div>
+                </div><!--//item-->
+                <div class="item">
+                    <span class="project-title"><a href="https://github.com/mariazevedo88/artigo-solid-medium" target="_blank">artigo-solid-medium</a></span> -
+                    <span class="project-tagline">Implementations of the examples demonstrated in the article: <a href="https://bit.ly/2o97vY1" target="_blank">https://bit.ly/2o97vY1</a> (Portuguese)
+                     and <a href="https://bit.ly/2OhRgEn" target="_blank">https://bit.ly/2OhRgEn</a> (English)</span>
+                    <div class="company">Personal. Language: Java</div>
+                </div><!--//item-->
+                <div class="item">
+                    <span class="project-title"><a href="https://github.com/mariazevedo88/artigo-boas-praticas-medium" target="_blank">artigo-boas-praticas-medium</a></span> -
+                    <span class="project-tagline">Implementations of the examples demonstrated in the article: <a href="https://bit.ly/2Cs4PxN" target="_blank">https://bit.ly/2Cs4PxN</a> (Portuguese)
+                     and <a href="https://bit.ly/2Rzp0xo" target="_blank">https://bit.ly/2Rzp0xo</a> (English)</span>
+                    <div class="company">Personal. Language: Java</div>
+                </div><!--//item-->
+                <div class="item">
+                    <span class="project-title"><a href="https://github.com/mariazevedo88/json-formatter" target="_blank">json-formatter</a></span> -
+                    <span class="project-tagline">Linux Shell Script to format a JSON file.</span>
+                    <div class="company">Personal. Language: Shell Script</div>
+                </div>
+                <!--//item-->
+            </section><!--//section-->
+
+            <section class="section papers-section">
+                <h2 class="section-title"><i class="fa fa-pencil"></i>Articles written</h2>
+                <div class="intro">
+                    <p>Articles that I wrote</p>
+                </div><!--//intro-->
+                <div class="item" ng-repeat="article in articlesPublished">
+                     <span class="paper-title" ng-bind-template="[{{article.year}}] {{article.name}}"></span>
+                     <div class="company">Language: <span class="project-tagline" ng-bind-template="{{article.language}}"></span></div>
+                     <div class="company"><span class="project-tagline" ng-click="downloadPaper(article.link)"><a class="cursor-pointer company">Link to the article</a></span></div>
+                </div><!--//item-->
+            </section><!--//section-->
+
+            <section class="section papers-section">
+                <h2 class="section-title"><i class="fa fa-download"></i>Papers published</h2>
+                <div class="intro">
+                    <p>Scientific papers that I wrote</p>
+                </div><!--//intro-->
+                <div class="item" ng-repeat="paper in papersPublished">
+                     <span class="paper-title" ng-bind-template="[{{paper.year}}] {{paper.name}}"></span> - <span class="project-tagline" ng-click="downloadPaper(paper.link)"><a class="cursor-pointer company">Download ({{paper.size}})</a></span>
+                </div><!--//item-->
+            </section><!--//section-->
+            
+            <section class="skills-section section">
+                <h2 class="section-title"><i class="fa fa-rocket"></i>Skills &amp; Proficiency</h2>
+                <div class="skills">
+                  <div class="item-skills" data-percent="1.00">Java</div>
+                  <div class="item-skills" data-percent="1.00">Scrum</div>
+                  <div class="item-skills" data-percent="1.00">Research</div>
+                  <div class="item-skills" data-percent="1.00">Software development</div>
+                  <div class="item-skills" data-percent="1.00">Software engineering</div>
+                  <div class="item-skills" data-percent="0.90">Spring Framework</div>
+                  <div class="item-skills" data-percent="0.90">JavaScript</div>
+                  <div class="item-skills" data-percent="0.90">AngularJS</div>
+                  <div class="item-skills" data-percent="0.90">Git</div>
+                  <div class="item-skills" data-percent="0.90">MySQL</div>
+                  <div class="item-skills" data-percent="0.88">Apache Camel</div>
+                  <div class="item-skills" data-percent="0.88">JBoss</div>
+                  <div class="item-skills" data-percent="0.85">PostgreSQL</div>
+                  <div class="item-skills" data-percent="0.85">Oracle</div>
+                  <div class="item-skills" data-percent="0.80">Groovy/Grails</div>
+                  <div class="item-skills" data-percent="0.80">Android development</div>
+                  <div class="item-skills" data-percent="0.75">Shell Script</div>
+                  <div class="item-skills" data-percent="0.70">Vue.js</div>
+                  <div class="item-skills" data-percent="0.70">HTML/CSS</div>
+                  <div class="item-skills" data-percent="0.70">Bootstrap</div>
+                  <div class="item-skills" data-percent="0.70">MyBatis</div>
+                  <div class="item-skills" data-percent="0.70">Linux</div>
+                  <div class="item-skills" data-percent="0.45">Python</div>
+                  <div class="item-skills" data-percent="0.45">PHP</div>
+                  <div class="item-skills" data-percent="0.30">Wordpress</div>
+                  <div class="skills-legend clearfix">
+                    <div class="legend-left legend">Beginner</div>
+                    <div class="legend-left legend"><span>Proficient</span></div>
+                    <div class="legend-right legend"><span>Expert</span></div>
+                    <div class="legend-right legend">Master</div>
+                  </div>
+                </div>
+            </section><!--//skills-section-->
+            
+        </div><!--//main-body-->
+    </div>
+ 
+    <footer class="footer">
+        <div class="text-center">
+            <small class="copyright">Designed with <i class="fa fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+        </div><!--//container-->
+        <div class="text-center">
+          <small class="copyright">Improved/Updated by Mariana Azevedo</small>
+        </div>
+    </footer><!--//footer-->
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+	<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <!-- Javascript -->          
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>    
+    <!-- custom js -->
+    <script type="text/javascript" src="js/index.js"></script>            
+  </body>
+</html> 
+
