@@ -132,21 +132,33 @@ Since: 06/08/2016
 			}, 100);
 		};
 
-		$scope.goToLinkedIn = function(){
-			document.location.assign("https://www.linkedin.com/in/mariana-de-azevedo-santos-1a126321");
+		$scope.goToFacebook = function(){
+			document.location.assign("https://www.facebook.com/mzaitoon70");
+		};
+ $scope.goToTwitter = function(){
+			document.location.assign("https://www.twitter.com/mzaitoon70");
+		};
+ $scope.goToInstagram = function(){
+			document.location.assign("https://www.instagram.com/mohamedzaitoon70");
+		};
+$scope.goToYoutube = function(){
+			document.location.assign("https://www.youtube.com/channel/UCiIYQBfeFusyx5QtvdRYfqQ");
+		};
+$scope.goToWhatsApp = function(){
+			document.location.assign("https://wa.me/201554257297");
 		};
 
 		$scope.goToGithub = function(){
-			document.location.assign("https://github.com/mariazevedo88");
+			document.location.assign("https://github.com/mohamed-zaitoon");
 		};
 
 		$scope.sendMail = function(){
-    		$window.location.href = "mailto:mariana@bsi.ufla.br";
+    		$window.location.href = "mailto:mzaitoon70@gmail.com";
+		};
+		$scope.callMobile = function(){
+    		$window.location.href = "tel:+201027570993";
 		};
 		
-		$scope.goToSourcerer = function(){
-			$window.location.href = "https://sourcerer.io/mariazevedo88"
-		}
 
     $scope.downloadPaper = function(link){
     		$window.location.href = link;
